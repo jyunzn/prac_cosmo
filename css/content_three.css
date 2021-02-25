@@ -16,13 +16,10 @@
 }
 
 .content_three .ward_infos .h2 {
-    font-size: 7rem;
+    font-size: 6rem;
     color: white;
     font-weight: 900;
-    /* margin-bottom: 7rem; */
     overflow: hidden;
-    height: 24.5rem;
-    margin-bottom: 50px;
 }
 .content_three .ward_infos .h2 .content {
     display: inline-block;
@@ -55,10 +52,19 @@
     flex-direction: column;
     height: calc(100% - 24.5rem );
     justify-content: space-between;
-    font-size: 2rem;    
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    transform: translateX(10rem);
+    opacity: 0;
+    transition: all ease 1s;
+    transition-delay: .6s;
 }
 .content_three .ward_infos .ward_each {
     display: flex;
+    border-bottom: 1px solid #dedede;
+    align-items: center;
 }
 .content_three .ward_infos .ward_each .ward_name {
     margin-right: 10rem;
