@@ -1,0 +1,147 @@
+.content_two {
+    background: black;
+    position: relative;
+    width: 160rem;
+}
+
+.content_two > div{
+    height: 100%;
+}
+
+/* [ 最左邊文字部分 ] */
+.content_two .intro {
+    font-size: 1.6rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 50rem;
+    left: 10rem;
+}
+
+/* 文字部分的上半段 */
+.content_two .intro .exp {
+    display: flex;
+    height: 80vh;
+    padding: 10rem 0;
+}
+
+.content_two .intro .exp_box {
+    overflow: hidden;
+}
+.content_two .intro .exp_box > div {
+    transition: all 2s ease;
+    opacity: 0;
+}
+
+.content_two .intro .exp_b2 {
+    align-self: center;
+}
+
+.content_two .intro .exp_b3 {
+    align-self: flex-end;
+}
+
+.content_two .intro  .exp_box .number {
+    font-size: 13rem;
+    font-weight: 900;
+    transform: translateX(50%);
+}
+
+.content_two .intro .exp_box  .line {
+    height: .5rem;
+    background: white;
+    transform: translateX(-100%);
+}
+
+.content_two .intro .exp_box  .word {
+    line-height: 7rem;
+    transform: translateX(50%);
+}
+
+/* 顯示動畫 */
+.content_two .intro .exp_box.show > div {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content_two .intro .exp_box.show .line {
+    transition-delay: .3s;
+}
+
+.content_two .intro .exp_box.show .word {
+    transition-delay: .5s;
+}
+
+
+
+/* 文字部分的下半段 */
+.content_two .intro .english_word {
+    line-height: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* [ ] */
+.content_two .intro_pic_box  {
+    position: absolute;
+    width: 100rem;
+    height: 100%;
+    margin-left: 5rem;
+    left: 60rem;
+}
+
+/* left: 60rem; */
+.content_two .intro_pic_box .intro_more_box {
+    height: 100%;
+    width: 60rem;
+}
+
+.content_two .intro_pic_box .intro_more_box .img {
+    height: 50rem;
+    width: 100%;
+    background: white;
+}
+
+.content_two .intro_pic_box .intro_more_box .more_info {
+    height: calc(100% - 50rem);
+    position: relative;
+
+}
+.content_two .intro_pic_box .intro_more_box .more_info > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content_two .intro_pic_box .intro_more_box .more_info .word {
+    color: white;
+    font-size: 1.6rem;
+}
+.content_two .intro_pic_box .intro_more_box .more_info .word > p {
+    height: 3.8rem;
+}
+
+.content_two .intro_pic_box .bottom_img {
+    height: 65rem;
+    width: 50rem;
+    background: white;
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* [moon] */
+.content_two .moon {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    background: #142a5f;
+    height: 38rem;
+    width: 38rem;
+    border-radius: 100%;
+    z-index: 2;
+    transform: translateX(50rem);
+    transition: .5s linear all;
+}

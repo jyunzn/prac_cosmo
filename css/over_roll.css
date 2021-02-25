@@ -1,0 +1,19 @@
+/* 滾動內容 */
+.scoll {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.scroll_content {
+    white-space: nowrap;
+    font-size: 0;
+    transition: all .5s linear ;
+}
+.scroll_content > div {
+    display: inline-block;
+    height: 100vh;
+    box-sizing: border-box;
+    background: black;
+    
+}

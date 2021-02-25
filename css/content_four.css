@@ -1,0 +1,71 @@
+.content_four {
+    width: 60rem;
+    position: relative;
+    height: 100%;
+}
+
+.content_four .contact_info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 10rem;
+}
+
+
+.content_four .contact_info .social {
+    display: flex;
+    justify-content: space-between;
+    height: 10rem;
+}
+.content_four .contact_info .social li {
+    height: 3rem;
+    width: 3rem;
+    background: white;
+}
+
+.content_four .contact_info .contact {
+    font-size: 1.8rem;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.content_four .contact_info .contact h2 {
+    position: absolute;
+    right: 0;
+    font-size: 3rem;
+    top: 1.5rem;
+}
+
+
+.content_four .contact_info .contact .each_contact .field {
+    opacity: .5;
+    height: 2.5rem;
+}
+
+.content_four .contact_info .contact .each_contact .value {
+    line-height: 2rem;
+}
+
+.content_four .contact_info .contact .each_contact::after {
+    content: '';
+    display: block;
+    background: #38416d;
+    height: .2rem;
+    margin: 3rem 0;
+    transform: translate(-100%);
+    transition: 1s ease all;
+}
+
+.content_four .contact_info .contact .each_contact:hover::after {
+    transform: translate(0);
+}
+
+.content_four .rocket {
+    position: absolute;
+    bottom: 3rem;
+    right: 10rem;
+    transform: rotate(180deg);
+}

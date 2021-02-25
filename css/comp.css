@@ -1,0 +1,102 @@
+/* [READ MORE] */
+.more {
+    height: 10rem;
+    width: 20rem;
+    background: white;
+    position: relative;
+}
+
+.more .bghover {
+    z-index: 2;
+    background: skyblue;
+    opacity: 0;
+    transition: 2s ease all;
+}
+
+.more:hover .bghover {
+    opacity: 1;
+}
+
+.more .read_more {
+    z-index: 3;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 10rem;
+    color: black;
+    font-weight: 900;
+    transition: 2s ease all;
+}
+
+.more:hover .read_more {
+    color: white;
+}
+
+/* [ROCKET] */
+.rocket {
+    display: flex;
+    align-items: center;
+    height: 8rem;
+}
+.rocket .fire {
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.rocket .fire p {
+    height: .5rem;
+    width: calc(100% - .3rem);
+    margin-left: .3rem;
+    
+    overflow: hidden;
+}
+
+.rocket .fire p.line2 {
+    margin: .3rem 0;
+    margin-left: 0;
+}
+
+
+.rocket .fire p b {
+    background: white;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transform: translateX(100%);
+    animation:  fly 2s ease infinite;
+}
+
+
+.rocket .fire p.line2 b {
+    animation-delay: .3s;
+}
+
+.rocket .fire p.line3 b {
+    animation-delay: .6s;
+}
+
+.rocket .pic_box {
+    width: 8rem;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+}
+.rocket .line {
+    width: 5rem;
+    height: .1rem;
+    background: white;
+    margin-left: .5rem;
+}
+
+/* <div class="rocket">
+        <div class="fire">
+            <p class="line1"><b></b></p>
+            <p class="line2"><b></b></p>
+            <p class="line3"><b></b></p>
+        </div>
+        <div class="pic_box"></div>
+        <div class="line"></div>
+    </div> */

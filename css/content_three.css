@@ -1,0 +1,332 @@
+
+.content_three {
+    width: 300.9rem;
+    position: relative;
+    background: #f2f2f2 !important;
+}
+
+/* [ 獎項 ] */
+/* 上面標題 */
+.content_three .ward_infos {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    z-index: 3;
+    height: calc(100% - 10rem);
+}
+
+.content_three .ward_infos .h2 {
+    font-size: 7rem;
+    color: white;
+    font-weight: 900;
+    /* margin-bottom: 7rem; */
+    overflow: hidden;
+    height: 24.5rem;
+    margin-bottom: 50px;
+}
+.content_three .ward_infos .h2 .content {
+    display: inline-block;
+}
+
+.content_three .ward_infos .h2 .word {
+    transform: translateX(10rem);
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+.content_three .ward_infos .h2 .line {
+    height: .5rem;
+    background: white;
+    transform: translateX(-100%);
+    transition: all ease 1s;
+}
+.content_three .ward_infos.show .h2 .word, 
+.content_three .ward_infos.show .h2 .line,
+.content_three .ward_infos.show > ul {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/**/
+.content_three .ward_infos > ul {
+    max-height: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 24.5rem );
+    justify-content: space-between;
+    font-size: 2rem;    
+}
+.content_three .ward_infos .ward_each {
+    display: flex;
+}
+.content_three .ward_infos .ward_each .ward_name {
+    margin-right: 10rem;
+}
+.content_three .ward_infos .ward_each:last-child {
+    border-bottom: 0;
+}
+
+.content_three .ward_infos .ward_each .ward_logo {
+    width: 18rem;
+    display: flex;
+    align-items: center;
+}
+.content_three .ward_infos .ward_each .ward_logo .logo {
+    background-color: black;
+    width: 6rem;
+    height: 6rem;
+}
+
+.content_three .ward_infos .ward_each .ward_name {
+    width: 15rem;
+    font-weight: 900;
+}
+
+.content_three .ward_infos .astronau {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background: #e1e8eb;
+    position: absolute;
+    right: -20rem;
+    top: 10rem;
+    transition: 1s ease all;
+    transform: translate(100%, 100%) scale(0);
+}
+
+.content_three .ward_infos .astronau.show {
+    transform: unset;
+}
+
+
+/* [ 獲獎作品 ] */
+.content_three .ward_works {
+    position: absolute;
+    left: 130rem;
+    height: 100%;
+    width: 110.9rem;
+}
+.content_three .ward_works > ul {
+    margin-top: 10rem;
+    height: calc(100% - 10rem);
+    width: 104rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content_three .ward_works .work {
+    width: 30rem;
+    font-size: 1.6rem;
+    position: absolute;
+    display: inline-block;
+    color: black;
+    transition: all ease 1s;
+    transform: translateX(5rem);
+    opacity: 0;
+}
+
+.content_three .ward_works.show .work {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content_three .ward_works .worktwo {
+    top: 50%;
+    left: 50%;
+    margin: -25rem 0 0 -15rem;
+    transition-delay: .3s;
+}
+
+
+.content_three .ward_works .workthree {
+    margin-left: 4rem;
+    right: 0;
+    bottom: 0;
+    transition-delay: .6s;
+}
+
+.content_three .ward_works .work .img {
+    height: 40rem;
+    background: #0b1faa;
+    transition: all ease .3s;
+}
+.content_three .ward_works .work:hover .img {
+    filter:grayscale(100%);
+}
+
+
+.content_three .ward_works .work .info_box {
+    height: 10rem;
+    background: white;
+    padding-top: 2rem;
+    transition: all ease .3s;
+}
+.content_three .ward_works .work:hover .info_box {
+    background: #242c51;
+    color: white;
+}
+
+
+.content_three .ward_works .work .info_box .info {
+    height: 8rem;
+    width: 20rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.content_three .ward_works .work .info_box .info::before,
+.content_three .ward_works .work .info_box .info::after {
+    content: '';
+    display: block;
+    height: .3rem;
+    width: 100%;
+}
+.content_three .ward_works .work .info_box .info::before {
+    background: white;
+    transform: translateX(-100%);
+    transition: all ease .3s;
+    position: relative;
+    z-index: 2;
+}
+.content_three .ward_works .work .info_box .info::after {
+    background: black;
+    position: absolute;
+    top: 0;
+}
+
+.content_three .ward_works .work:hover .info_box .info::before {
+    transform: translateX(0);
+}
+
+
+.content_three .ward_works .work .info_box .info > p {
+    padding-top: .5rem;
+}
+
+.content_three .ward_works .work .vertical_word {
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 4.5rem;
+    bottom: 9rem;
+    font-size: 2.5rem;
+    color: white;
+
+    transform: translateY(2rem) rotate(-180deg);
+    opacity: 0;
+    transition: .3s ease all;
+}
+
+.content_three .ward_works .work:hover .vertical_word {
+    transform: rotate(-180deg);
+    opacity: 1;
+}
+
+.content_three .ward_works .line-box {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.content_three .ward_works .line-box > b {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: .1rem;
+    height: 100%;
+    background: black;
+    transform: translateY(-100%);
+    transition: all ease 1s;
+}
+
+.content_three .ward_works.show .line-box > b {
+    transform: translateY(0%);
+}
+
+.content_three .ward_works .line-box > b.line2 {
+    left: 36.9rem;
+    transition-delay: .3s;
+}
+
+.content_three .ward_works .line-box > b.line3 {
+    right: 36.9rem;
+    transition-delay: .6s;
+}
+
+.content_three .ward_works .line-box > b.line4 {
+    right: 0;
+    transition-delay: .9s;
+}
+
+
+/* [] */
+.content_three .works_slogan {
+    position: absolute;
+    font-size: 1.4rem;
+    width: 60rem;
+    left: 240.9rem;
+    height: 100%;
+}
+
+.content_three .works_slogan .works {
+    position: absolute;
+    width: 30rem;
+    left: 6rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content_three .works_slogan .works .title  {
+    overflow: hidden;
+    height: 13rem;
+}
+
+.content_three .works_slogan .works .title > h2,
+.content_three .works_slogan .works .title::after, 
+.content_three .works_slogan .works > p, 
+.content_three .works_slogan .works .more {
+    transition: all ease .3s;
+    opacity: 0;
+    transform: translateX(5rem);
+}
+
+.content_three .works_slogan .works .title > h2 {
+    font-size: 6rem;
+    
+    font-weight: 900;
+}
+
+.content_three .works_slogan .works .title::after {
+    content: '';
+    display: block;
+    background: black;
+    height: .2rem;
+    width: 23rem;
+    transform: translateX(-100%);
+}
+
+.content_three .works_slogan .works > p {
+    height: 14rem;
+    white-space: initial;
+    transition-delay: .3s;
+    font-size: 1.6rem;
+}
+
+
+.content_three .works_slogan .works .more {
+    height: 7rem;
+    transition-delay: .6s;
+}
+
+.content_three .works_slogan .works .more .read_more {
+    line-height: 7rem;
+}
+
+.content_three .works_slogan.show .works .title > h2,
+.content_three .works_slogan.show .works .title::after,
+.content_three .works_slogan.show .works > p,
+.content_three .works_slogan.show .works .more {
+    transform: translateX(0);
+    opacity: 1;
+}

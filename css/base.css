@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
+}
+
+html {
+    overflow: hidden;
+    font-size: 10px; /* 基準螢幕寬度 1400 */
+}
+/* 
+.clear:before, .clear:after { 
+	content: ""; 
+	display: table;
+}
+.clear:after {
+	clear: both;
+}
+.clear {
+	*zoom: 1;
+} */
+
+.ab100 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fw900 {
+    font-weight: 900!important;
+}
+
+.black {
+    color: black!important;
+}
