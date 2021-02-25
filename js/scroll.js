@@ -148,9 +148,16 @@ function scroll(wheelDelta) {
             oTopPro.classList.add('show');
             oContentTwoExpBox.forEach(dom => dom.classList.add('show'))
         }
+
+        if (move <= -180) {
+            moonMove += wheelDelta / 30
+            oContentTwoMoon.style.transform = `translate3d(${moonMove}rem, 0, 0)`
+        }
+
         if (move <= -220) {
             oContentThreeWardInfos.classList.add('show');
         }
+        
         if (move <= -320) {
             oContentThreeAstronau.classList.add('show');   
         }
@@ -161,13 +168,10 @@ function scroll(wheelDelta) {
         if (move <= -480) {
             oContentThreeWorksSlogan.classList.add('show');
         }
-        // // 月亮
-        if (move <= -180) {
-            moonMove += wheelDelta / 30
-            oContentTwoMoon.style.transform = `translate3d(${moonMove}rem, 0, 0)`
-        }
+        
     }
     t = c;
     oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`;
     oTopRocket.style.transform = `translate3d(${topRocketMove}px, 0, 0)`;
 }
+

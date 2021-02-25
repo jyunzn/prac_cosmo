@@ -9,10 +9,10 @@
 /* 上面標題 */
 .content_three .ward_infos {
     position: absolute;
-    top: 10rem;
-    left: 10rem;
+    top: 0;
     z-index: 3;
-    height: calc(100% - 10rem);
+    height: 100%;
+    width: 130rem;
 }
 
 .content_three .ward_infos .h2 {
@@ -20,6 +20,9 @@
     color: white;
     font-weight: 900;
     overflow: hidden;
+    position: absolute;
+    top: 12rem;
+    left: 15rem;
 }
 .content_three .ward_infos .h2 .content {
     display: inline-block;
@@ -46,16 +49,14 @@
 
 /**/
 .content_three .ward_infos > ul {
-    max-height: 400px;
-    min-height: 400px;
+    height: 30rem;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 24.5rem );
     justify-content: space-between;
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 20rem;
     transform: translateX(10rem);
     opacity: 0;
     transition: all ease 1s;
@@ -80,8 +81,8 @@
 }
 .content_three .ward_infos .ward_each .ward_logo .logo {
     background-color: black;
-    width: 6rem;
-    height: 6rem;
+    width: 40px;
+    height: 40px;
 }
 
 .content_three .ward_infos .ward_each .ward_name {
@@ -95,10 +96,10 @@
     border-radius: 50%;
     background: #e1e8eb;
     position: absolute;
-    right: -20rem;
-    top: 10rem;
     transition: 1s ease all;
     transform: translate(100%, 100%) scale(0);
+    right: 200px;
+    top: 200px;
 }
 
 .content_three .ward_infos .astronau.show {
