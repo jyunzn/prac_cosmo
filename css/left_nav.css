@@ -59,17 +59,6 @@
     margin: .2rem;
 }
 
-/* 點擊按鈕 */
-.left_nav .content_box .nav_btn_box .nav_btn.click .line1 {
-    transform: rotate(45deg);
-}
-.left_nav .content_box .nav_btn_box .nav_btn.click .line2 {
-    display: none;
-}
-.left_nav .content_box .nav_btn_box .nav_btn.click .line3 {
-    transform: rotate(135deg);
-}
-
 .left_nav .content_box .info {
     border-left: .1rem solid black;
     height: calc(100% - 12rem);
@@ -136,5 +125,16 @@
     font-size: 1.5rem;
 }
 
-
-/* height: calc(100vh - 14.4rem); */
+/* 點擊按鈕 */
+.left_nav.click .content_box .nav_btn_box .nav_btn {
+    transform: rotate(90deg);
+}
+.left_nav.click .content_box .nav_btn_box .nav_btn .line1 {
+    transform: rotate(45deg);
+}
+.left_nav.click .content_box .nav_btn_box .nav_btn .line2 {
+    display: none;
+}
+.left_nav.click .content_box .nav_btn_box .nav_btn .line3 {
+    transform: rotate(135deg);
+}

@@ -1,5 +1,10 @@
 const oScrollContent           = document.querySelector('.scroll_content');
 const oLeftNav                 = document.querySelector('.left_nav');
+
+// 最上面那條 progress bar
+const oTopPro                  = document.querySelector('.top_pro');
+const oTopRocket               = oTopPro.querySelector('.top_pro .top_rocket');
+
 const oContentOne              = document.querySelector('.content_one');
 const oContentTwoExpBox        = document.querySelectorAll('.content_two .exp_box');
 const oContentTwoMoon          = document.querySelector('.content_two .moon');
@@ -14,8 +19,10 @@ let move = 0;
 let moonMove = 50;
 let leftNavLock = false;
 
-let windowWidth = window.innerWidth;
+let windowWidth         = window.innerWidth;
 let oScrollContentWidth = oScrollContent.scrollWidth;
+let oTopRocketWidth     = oTopRocket.scrollWidth;
+
 let maxMoveRight = windowWidth - oScrollContentWidth;
 let fontSize = document.documentElement.style.fontSize;
     fontSize = fontSize.slice(0, fontSize.lastIndexOf('px')) * 1;
@@ -50,6 +57,7 @@ if (navigator.userAgent.includes('Firefox')) {
     })
 }
 
+let topRocketMove = 0;
 
 let t = Date.now();
 let a = Math.floor(1000 / 60);
@@ -57,16 +65,21 @@ function scroll(wheelDelta) {
     let c = Date.now();
     if ((c - t) < a) return ;
     
-    move += (wheelDelta / 10);
+    let moveStep = wheelDelta / 10;
+    topRocketMove += ((wheelDelta / 10) * oTopRocketWidth) / maxMoveRight;
+    move += moveStep;
     
     if (wheelDelta > 0) {
         if (move > 0) {
             move = 0;
+            topRocketMove = 0;
             oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`
+            oTopRocket.style.transform = `translate3d(${topRocketMove}px, 0, 0)`;
             return;
         }
 
         if (move > -40) {
+            oTopPro.classList.remove('show');
             oContentTwoExpBox.forEach(dom => dom.classList.remove('show'))
         }
         if (move > -200) {
@@ -91,7 +104,9 @@ function scroll(wheelDelta) {
         
         if (move < maxMoveRight) {
             move = maxMoveRight;
+            topRocketMove = oTopRocketWidth;
             oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`
+            oTopRocket.style.transform = `translate3d(${topRocketMove}px, 0, 0)`;
             return ;
         }
         if (!leftNavLock) {
@@ -99,6 +114,7 @@ function scroll(wheelDelta) {
             leftNavLock = true;
         }
         if (move <= -50) {
+            oTopPro.classList.add('show');
             oContentTwoExpBox.forEach(dom => dom.classList.add('show'))
         }
         if (move <= -220) {
@@ -120,7 +136,7 @@ function scroll(wheelDelta) {
             oContentTwoMoon.style.transform = `translate3d(${moonMove}rem, 0, 0)`
         }
     }
-    console.log(moonMove);
     t = c;
-    oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`
+    oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`;
+    oTopRocket.style.transform = `translate3d(${topRocketMove}px, 0, 0)`;
 }
