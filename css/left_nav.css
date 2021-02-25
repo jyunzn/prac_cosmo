@@ -7,13 +7,17 @@
     position: fixed;
     
     transition: all .3s ease;
-    transition-delay: 1s;
+    transition-delay: .3s;
     z-index: 100;
     padding-left: 4.5rem;
 
     overflow: hidden;
 }
 
+
+.left_nav.slow {
+    transition-delay: 1.2s!important;
+}
 .left_nav.small {
     width: 25rem;
     height: 100vh;

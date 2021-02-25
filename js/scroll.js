@@ -1,5 +1,5 @@
 const oScrollContent           = document.querySelector('.scroll_content');
-const oLeftNav                 = document.querySelector('.left_nav');
+
 
 // 最上面那條 progress bar
 const oTopPro                  = document.querySelector('.top_pro');
@@ -12,8 +12,11 @@ const oContentThreeWardInfos   = document.querySelector('.content_three .ward_in
 const oContentThreeAstronau    = document.querySelector('.content_three .astronau');
 const oContentThreeWardWorks   = document.querySelector('.content_three .ward_works');
 const oContentThreeWorksSlogan = document.querySelector('.content_three .works_slogan');
-const oLeftNavNavBtn           = document.querySelector('.left_nav .nav_btn');
 
+const oLeftNav                 = document.querySelector('.left_nav');
+const oLeftNavNavBtn           = oLeftNav.querySelector('.nav_btn');
+const oMenu                    = document.querySelector('.menu');
+const oNews                    = oMenu.querySelector('.news');
 
 let move = 0;
 let moonMove = 50;
@@ -35,12 +38,40 @@ oScrollContent.addEventListener('transitionend', function () {
         leftNavLock = false;
     }
 });
+
 window.addEventListener('load', function () {
     oContentOne.classList.add('show');
 })
-let navBtnFlag
-oLeftNavNavBtn.addEventListener('click', function () {
 
+
+// 按鈕點擊
+let btnFlag = true;
+oLeftNavNavBtn.addEventListener('click', function () {
+    if (btnFlag) {
+        oMenu.classList.add('open');
+        oMenu.classList.add('show');
+        oLeftNav.classList.add('click');
+        oLeftNav.classList.add('small');
+    } else {
+        oMenu.classList.add('close');
+        oMenu.classList.remove('show');
+        oLeftNav.classList.remove('click');
+        oLeftNav.classList.add('slow');
+        oLeftNav.classList.remove('small');
+        leftNavLock = false;
+    }
+    btnFlag = !btnFlag;
+});
+
+oNews.addEventListener('transitionend', function () {
+    oMenu.classList.remove('open');
+});
+
+oNews.addEventListener('transitionend', function () {
+    oMenu.classList.remove('close');
+});
+oLeftNav.addEventListener('transitionend', function () {
+    oLeftNav.classList.remove('slow');
 });
 
 
