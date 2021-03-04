@@ -50,6 +50,7 @@
     background: white;
     position: absolute;
     right: 0;
+    z-index: 9;
 }
 
 .top_pro .top_rocket .rock .rocket_img {

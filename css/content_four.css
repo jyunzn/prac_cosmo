@@ -21,7 +21,12 @@
 .content_four .contact_info .social li {
     height: 3rem;
     width: 3rem;
-    background: white;
+    background: black;
+}
+
+.content_four .contact_info .social li img {
+    height: 100%;
+    width: 100%;
 }
 
 .content_four .contact_info .contact {
