@@ -1,22 +1,35 @@
 const oScrollContent           = document.querySelector('.scroll_content');
-
-
 // 最上面那條 progress bar
 const oTopPro                  = document.querySelector('.top_pro');
-const oTopRocket               = oTopPro.querySelector('.top_pro .top_rocket');
+const oTopRocket               = oTopPro.querySelector('.top_rocket');
+const aTopProProgeass          = oTopPro.querySelectorAll('.progress');
 
 const oContentOne              = document.querySelector('.content_one');
-const oContentTwoExpBox        = document.querySelectorAll('.content_two .exp_box');
-const oContentTwoMoon          = document.querySelector('.content_two .moon');
-const oContentThreeWardInfos   = document.querySelector('.content_three .ward_infos');
-const oContentThreeAstronau    = document.querySelector('.content_three .astronau');
-const oContentThreeWardWorks   = document.querySelector('.content_three .ward_works');
-const oContentThreeWorksSlogan = document.querySelector('.content_three .works_slogan');
+const oContentTwo              = document.querySelector('.content_two');
+const oContentTwoExpBox        = oContentTwo.querySelectorAll('.exp_box');
+const oContentTwoMoon          = oContentTwo.querySelector('.moon');
+const oContentThree            = document.querySelector('.content_three');
+const oContentThreeWardInfos   = oContentThree.querySelector('.ward_infos');
+const oContentThreeAstronau    = oContentThree.querySelector('.astronau');
+const oContentThreeWardWorks   = oContentThree.querySelector('.ward_works');
+const oContentThreeWorksSlogan = oContentThree.querySelector('.works_slogan');
+const oContentFour             = document.querySelector('.content_four');
 
 const oLeftNav                 = document.querySelector('.left_nav');
 const oLeftNavNavBtn           = oLeftNav.querySelector('.nav_btn');
 const oMenu                    = document.querySelector('.menu');
 const oNews                    = oMenu.querySelector('.news');
+
+
+function getMaxMoveRight() {
+
+}
+window.onresize = function () { 
+    console.log(document.documentElement.clientWidth);
+    getMaxMoveRight();
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 140 + 'px';
+}
+window.onresize();
 
 let move = 0;
 let moonMove = 50;
@@ -43,8 +56,8 @@ window.addEventListener('load', function () {
     oContentOne.classList.add('show');
 })
 
-
 // 按鈕點擊
+
 let btnFlag = true;
 oLeftNavNavBtn.addEventListener('click', function () {
     if (btnFlag) {
@@ -76,16 +89,19 @@ oLeftNav.addEventListener('transitionend', function () {
 
 
 // FIREFOX 沒有 ev.wheelDelta 
+
+function handleWheel(ev) {
+    ev.preventDefault();
+    scroll(ev.wheelDelta);
+}
+function handleFFWheel() {
+    ev.preventDefault();
+    scroll(ev.detail * -9);
+}
 if (navigator.userAgent.includes('Firefox')) {
-    document.addEventListener("DOMMouseScroll", function (ev) {
-        ev.preventDefault();
-        scroll(ev.detail * -9);
-    },false)
+    document.addEventListener("DOMMouseScroll", handleFFWheel, false);
 } else {
-    oScrollContent.addEventListener('wheel', function (ev) {
-        ev.preventDefault();
-        scroll(ev.wheelDelta);
-    })
+    oScrollContent.addEventListener('wheel', handleWheel, false);
 }
 
 let topRocketMove = 0;
@@ -157,7 +173,7 @@ function scroll(wheelDelta) {
         if (move <= -220) {
             oContentThreeWardInfos.classList.add('show');
         }
-        
+
         if (move <= -320) {
             oContentThreeAstronau.classList.add('show');   
         }
@@ -174,4 +190,3 @@ function scroll(wheelDelta) {
     oScrollContent.style.transform = `translate3d(${move}rem, 0, 0)`;
     oTopRocket.style.transform = `translate3d(${topRocketMove}px, 0, 0)`;
 }
-

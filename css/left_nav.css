@@ -50,6 +50,7 @@
     justify-content: center;
     align-items: center;
     transition: all .3s linear;
+    cursor: pointer;
 }
 .left_nav .content_box .nav_btn_box .nav_btn:hover {
     transform: rotate(90deg);
@@ -122,6 +123,7 @@
     border: .1rem solid #434343;
     text-align: center;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .left_nav .content_box .info .website .copyright {

@@ -25,6 +25,7 @@
     color: black;
     font-weight: 900;
     transition: 2s ease all;
+    cursor: pointer;
 }
 
 .more:hover .read_more {
@@ -84,6 +85,13 @@
     border-radius: 50%;
     background: white;
 }
+
+.rocket .pic_box .rocket_img {
+    background: url('../img/rocket2.svg') no-repeat center;
+    background-size: contain;
+    height: 100%;
+}
+
 .rocket .line {
     width: 5rem;
     height: .1rem;
@@ -97,6 +105,8 @@
             <p class="line2"><b></b></p>
             <p class="line3"><b></b></p>
         </div>
-        <div class="pic_box"></div>
+        <div class="pic_box">
+            
+        </div>
         <div class="line"></div>
     </div> */

@@ -99,7 +99,8 @@
 .content_two .intro_pic_box .intro_more_box .img {
     height: 50rem;
     width: 100%;
-    background: white;
+    background: url(https://picsum.photos/id/1033/1200/1200) no-repeat center;
+    background-size: cover;
 }
 
 .content_two .intro_pic_box .intro_more_box .more_info {
@@ -125,7 +126,9 @@
 .content_two .intro_pic_box .bottom_img {
     height: 65rem;
     width: 50rem;
-    background: white;
+    /* background: url(https://picsum.photos/1200/1200?random=2) no-repeat center; */
+    background: url(https://picsum.photos/id/1035/1200/1200) no-repeat center;
+    background-size: cover;
     position: absolute;
     right: -3rem;
     bottom: 0;

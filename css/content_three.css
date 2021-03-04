@@ -55,12 +55,13 @@
     justify-content: space-between;
     font-size: 1.8rem;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 20rem;
     transform: translateX(10rem);
     opacity: 0;
     transition: all ease 1s;
     transition-delay: .6s;
+    min-height: 300px;
 }
 .content_three .ward_infos .ward_each {
     display: flex;
@@ -131,6 +132,7 @@
     transition: all ease 1s;
     transform: translateX(5rem);
     opacity: 0;
+    cursor: pointer;
 }
 
 .content_three .ward_works.show .work {
@@ -155,7 +157,8 @@
 
 .content_three .ward_works .work .img {
     height: 40rem;
-    background: #0b1faa;
+    background: url(https://picsum.photos/id/1050/1200/1200) no-repeat center;
+    background-size: cover;
     transition: all ease .3s;
 }
 .content_three .ward_works .work:hover .img {

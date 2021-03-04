@@ -89,6 +89,7 @@
 
 .content_one.show .mail_box {
     transition-delay: .6s;
+    cursor: pointer;
 }
 
 .content_one .mail_box > div {
@@ -111,7 +112,7 @@
 
 .content_one .mail_box .bg {
     background: skyblue;
-    transition: 2s ease all;
+    transition: 1s ease all;
     opacity: 0;
 }
 
